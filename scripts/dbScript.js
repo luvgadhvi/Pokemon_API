@@ -34,7 +34,8 @@ const LoadPokemon = (GenerationByNumber, Region, GenerationByString, pokemonList
             console.log(e);
         }
     }
-    console.log(`Done With ${Region}${GenerationByString}`)
+    console.log(`Done With ${Region} ${GenerationByString}`)
+    console.log(`Total ${pokemonList.length} pokemon Load for ${Region}${GenerationByString}`)
 }
 
 
