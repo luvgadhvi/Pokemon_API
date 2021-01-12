@@ -19,7 +19,6 @@ const insertUniqueValue = async () => {
             },
         }])
     console.log(pokemonList.length);
-    console.log(pokemonList[0]);
     for (let i = 0; i < pokemonList.length; i++) {
         try {
             const Pokemon = new GenerationModel({

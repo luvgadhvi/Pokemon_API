@@ -6,9 +6,8 @@ const GenerationModel = require('../models/pokedata');
 router.get('/byGeneration', async (req, res) => {
     try {
         const host = req.get('host')
-        console.log(host)
         let obj = { Descriptions: "List of Pokemon By Their Region", results: [] };
-        for (let i = 0; i <= 7; i++) {
+        for (let i = 0; i <= 8; i++) {
             obj['results'].push({ 'url': `http://${host}/byGeneration/${i + 1}` })
         }
         res.status(200).send(obj);
@@ -21,7 +20,6 @@ router.get('/byGeneration/:id', async (req, res) => {
     const _id = req.params.id;
     try {
         const PokeByGen = await GenerationModel.find({ GenerationByNumber: _id }).sort({ PokeId: "asc" });
-        console.log(PokeByGen)
         res.status(200).send({ count: PokeByGen.length, PokeByGen })
     } catch (e) {
         console.log(e)

@@ -1,6 +1,7 @@
 const express = require('express')
 const router = new express.Router()
 const GenerationModel = require('../models/pokedata');
+const fs = require('fs');
 //With this get call you will be able to search Pokemon by their name. 
 router.get('/searchPokemon', async (req, res) => {
     // ?search=pika -- Query Parameters
