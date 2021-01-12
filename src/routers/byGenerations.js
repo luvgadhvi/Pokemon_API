@@ -20,9 +20,11 @@ router.get('/byGeneration', async (req, res) => {
 router.get('/byGeneration/:id', async (req, res) => {
     const _id = req.params.id;
     try {
-        const PokeByGen = await GenerationModel.find({ GenerationByNumber: _id })
+        const PokeByGen = await GenerationModel.find({ GenerationByNumber: _id }).sort({ PokeId: "asc" });
+        console.log(PokeByGen)
         res.status(200).send({ count: PokeByGen.length, PokeByGen })
     } catch (e) {
+        console.log(e)
         res.status(500).send()
     }
 })

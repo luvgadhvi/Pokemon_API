@@ -2,6 +2,7 @@
 const { getTypes, getAbilities, getMoves, getStats } = require('./helper');
 //Model to Load in MongoDb Server.
 const GenerationModel = require('../src/models/pokedata');
+const AllModel = require('./AllPokemonModel');
 //Function of Insert Model Into DataBase.
 const LoadPokemon = (GenerationByNumber, Region, GenerationByString, pokemonList) => {
     for (let i = 0; i < pokemonList.length; i++) {
@@ -11,7 +12,7 @@ const LoadPokemon = (GenerationByNumber, Region, GenerationByString, pokemonList
             const Moves = getMoves(pokemonList[i].moves)
             const Stats = getStats(pokemonList[i].stats)
             //Creating The Model.
-            const Pokemon = new GenerationModel({
+            const Pokemon = new AllModel({
                 GenerationByNumber,
                 GenerationByString,
                 Region,

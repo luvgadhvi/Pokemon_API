@@ -1,3 +1,4 @@
+
 //Function to Extract Pokemon Type.
 const getTypes = (types) => {
     let type = []
@@ -36,4 +37,5 @@ const getStats = (stats) => {
     return stat
 }
 
-module.exports = {getTypes, getAbilities, getMoves, getStats }
+
+module.exports = { getTypes, getAbilities, getMoves, getStats }

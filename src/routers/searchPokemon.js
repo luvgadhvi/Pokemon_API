@@ -5,25 +5,16 @@ const GenerationModel = require('../models/pokedata');
 router.get('/searchPokemon', async (req, res) => {
     // ?search=pika -- Query Parameters
     const query = req.query.search;
-    const pokeResult = await GenerationModel.aggregate([
-        { "$match": { Name: new RegExp(query, "gi") } },
+    const pokeResult = await GenerationModel.find(
         {
-            $group: {
-                _id: '$Name',
-                detail: { $first: '$$ROOT' },
-                count: {
-                    $sum: 1,
-                },
-            },
-        },
-        {
-            $replaceRoot: {
-                newRoot: { $mergeObjects: [{ count: '$count' }, '$detail'] },
-            },
-        }])
+            $or: [
+                { "Name": new RegExp(query, "gi") }
+            ]
+        }
+    )
 
     try {
-        res.send({ originalCount: pokeResult.length, pokeResult })
+        res.send({ count: pokeResult.length, pokeResult })
     } catch (e) {
         res.status(500).send()
     }
