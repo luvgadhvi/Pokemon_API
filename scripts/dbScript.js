@@ -4,7 +4,7 @@ const { getTypes, getAbilities, getMoves, getStats } = require('./helper');
 const GenerationModel = require('../src/models/pokedata');
 const AllModel = require('./AllPokemonModel');
 //Function of Insert Model Into DataBase.
-const LoadPokemon = (GenerationByNumber, Region, GenerationByString, pokemonList) => {
+const LoadPokemon = async (GenerationByNumber, Region, GenerationByString, pokemonList) => {
     for (let i = 0; i < pokemonList.length; i++) {
         try {
             const Types = getTypes(pokemonList[i].types);

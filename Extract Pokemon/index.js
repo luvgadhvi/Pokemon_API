@@ -20,18 +20,17 @@ const GetPokeByPokedex = async (pokeDexNo, FileName) => {
     console.log('Done With Json Creation')
 }
 
-GetPokeByPokedex(6, 'sinnoh')
-GetPokeByPokedex(9, 'unova')
-GetPokeByPokedex(15, 'hoenn')
-GetPokeByPokedex(26, 'kanto')
-GetPokeByPokedex(6, 'sinnoh')
-GetPokeByPokedex(13, 'Kalos-central')
-GetPokeByPokedex(14, 'Kalos-costal')
-GetPokeByPokedex(15, 'Kalos-mountain')
-GetPokeByPokedex(16, 'Kalos-mountain')
-GetPokeByPokedex(22, 'updated-melemele');
-GetPokeByPokedex(23, 'updated-akala');
-GetPokeByPokedex(25, 'updated-akala');
-GetPokeByPokedex(28, 'isle-of-armor');
-GetPokeByPokedex(29, 'crown-tundra');
-GetPokeByPokedex(11, 'conquest-gallery');
+// GetPokeByPokedex(6, 'sinnoh')
+// GetPokeByPokedex(9, 'unova')
+// GetPokeByPokedex(15, 'hoenn')
+// GetPokeByPokedex(26, 'kanto')
+// GetPokeByPokedex(6, 'sinnoh')
+GetPokeByPokedex(12, 'Kalos-central')
+GetPokeByPokedex(13, 'Kalos-costal')
+GetPokeByPokedex(14, 'Kalos-mountain')
+// GetPokeByPokedex(22, 'updated-melemele');
+// GetPokeByPokedex(23, 'updated-akala');
+// GetPokeByPokedex(25, 'updated-akala');
+// GetPokeByPokedex(28, 'isle-of-armor');
+// GetPokeByPokedex(29, 'crown-tundra');
+// GetPokeByPokedex(11, 'conquest-gallery');

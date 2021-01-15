@@ -38,7 +38,7 @@ const insertUniqueValue = async () => {
                 Stats: pokemonList[i].Stats
             })
             //Saving Into DataBase.
-            Pokemon.save()
+            await Pokemon.save()
         }
         catch (e) {
             console.log(e);
