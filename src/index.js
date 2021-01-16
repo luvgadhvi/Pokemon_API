@@ -7,11 +7,11 @@ app.get('/', (req, res) => {
     const apiDescription =
         [
             {
-                "Descriptions": "This Api will give to information related to pokemon by their region",
+                "Descriptions": "This Api will give to information related to pokemon By Their Region",
                 "url": `http://${host}/byGeneration`
             },
             {
-                "Descriptions": "API on How to Search Your Desired Pokemon",
+                "Descriptions": "API to Search Your Desired Pokemon",
                 "url": `http://${host}/searchPokemon`
             }
         ]

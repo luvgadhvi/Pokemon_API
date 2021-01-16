@@ -7,11 +7,13 @@
     "start": "node src/index.js",
     "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
     "loaData": "env-cmd -f ./config/dev.env nodemon scripts/loadPokemon.js",
+    "extractPokemon": "node Extract_Pokemon/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Luv Gadhvi",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.11"

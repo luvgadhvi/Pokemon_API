@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//Pokemon Model to get required data.
 const ByGenerationSchema = new mongoose.Schema({
     GenerationByNumber: {
         type: Number,

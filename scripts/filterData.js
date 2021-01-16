@@ -1,7 +1,8 @@
 const insertUniqueValue = async () => {
-    //Model to Load in MongoDb Server.
+    //Model to Load into MongoDb Server.
     const GenerationModel = require('../src/models/pokedata');
     const AllModel = require('./AllPokemonModel');
+    //This Function will create new model in db that will have unique pokemon.
     const pokemonList = await AllModel.aggregate([
         { "$match": { Name: new RegExp('', "gi") } },
         {

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//Model we load in Mongo Database.
 const AllPokeByGenerationSchema = new mongoose.Schema({
     GenerationByNumber: {
         type: Number,

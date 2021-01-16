@@ -4,7 +4,7 @@ const { LoadPokemon } = require('./dbScript')
 const GenerationModel = require('../src/models/pokedata');
 const insertUniqueValue = require('./filterData');
 //Load The data By Generations. 
-function GenrationSave() {
+function GenerationSave() {
     return new Promise((resolve, reject) => {
         GenerationDetails.map((generationList) => {
             console.log(`Started With ${generationList.region} ${generationList.generation}`)
@@ -14,7 +14,7 @@ function GenrationSave() {
         resolve('Done With All Data Now Filter Time')
     })
 }
-GenrationSave().then((data) => {
+GenerationSave().then((data) => {
     console.log(data);
     insertUniqueValue();
 })
